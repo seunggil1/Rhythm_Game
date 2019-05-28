@@ -14,8 +14,8 @@ public class buttonScript : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.right, 2.0f);
-        Debug.DrawRay(transform.position, transform.right * 2.0f, Color.red);
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.right, 1.5f);
+        Debug.DrawRay(transform.position, transform.right * 1.5f, Color.red);
 
         if (hit)
         {
@@ -26,11 +26,9 @@ public class buttonScript : MonoBehaviour
         else
             target_wall = null;
     }
-    private void OnMouseDown()
+    public void onHit()
     {
         if(target_wall != null)
-        {
             target_wall.gameObject.GetComponent<Collider2D>().enabled = false;
-        }
     }
 }
