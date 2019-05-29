@@ -27,6 +27,6 @@ public class main_startScreen : MonoBehaviour
     void FixedUpdate()
     {
         if (Input.touchCount > 0)
-            UnityEngine.SceneManagement.SceneManager.LoadScene("Menu");
+            UnityEngine.SceneManagement.SceneManager.LoadScene("mainMenu");
     }
 }

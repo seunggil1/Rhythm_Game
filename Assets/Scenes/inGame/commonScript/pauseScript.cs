@@ -13,7 +13,7 @@ public class pauseScript : MonoBehaviour
     void Update()
     {
     }
-    private void OnMouseDown()
+    private void OnMouseUp()
     {
         ob.GetComponent<main_inGame>().pauseButton.isClicked = true;
     }

@@ -16,7 +16,7 @@ public class upButton : MonoBehaviour
     {
         
     }
-    private void OnMouseDown()
+    private void OnMouseUp()
     {
         if(ob.transform.position.y != 3)
             ob.transform.Translate(Vector2.up * 3.0f);

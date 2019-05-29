@@ -14,7 +14,7 @@ public class resumeScript : MonoBehaviour
     {
         
     }
-    private void OnMouseDown()
+    private void OnMouseUp()
     {
         ob.GetComponent<main_inGame>().resumeButton.isClicked = true;
     }

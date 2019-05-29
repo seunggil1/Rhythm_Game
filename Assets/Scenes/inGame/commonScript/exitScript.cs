@@ -14,7 +14,7 @@ public class exitScript : MonoBehaviour
     {
         
     }
-    private void OnMouseDown()
+    private void OnMouseUp()
     {
         ob.GetComponent<main_inGame>().exitButton.isClicked = true;
     }

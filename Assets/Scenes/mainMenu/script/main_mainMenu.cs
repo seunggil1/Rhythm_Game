@@ -4,97 +4,51 @@ using UnityEngine;
 
 public class main_mainMenu : MonoBehaviour
 {
-    private float startTime;
-    private float nowTime;
+    public UiData menu;
+        public ButtonData gameStart;
+        public ButtonData login;
+        public ButtonData exit;
 
-    public int Layer;
-    public int stage;
+    public UiData select;
+        public ButtonData music1;
+        public ButtonData music2;
+        public ButtonData music3;
 
-    GameObject StageList;
-    GameObject Stage1;
-    GameObject Stage2;
-
-    // Start is called before the first frame update
     void Start()
     {
         new screenSetting().screenSet();
 
-        startTime = 0.0f;
-        nowTime = 0.0f;
+        menu = new UiData("menu");
 
-        StageList = GameObject.Find("[1280_720]stageList");
-        Stage1 = GameObject.Find("[1280_720]stage1");
-        Stage2 = GameObject.Find("[1280_720]stage2");
-        
-        Layer = 1;
-        stage = 0;
+        gameStart = new ButtonData("gameStart");
+        login = new ButtonData("login");
+        exit = new ButtonData("exit");
 
-        StageList.GetComponent<SpriteRenderer>().enabled = false;
-        Stage1.GetComponent<SpriteRenderer>().enabled = false;
-        Stage2.GetComponent<SpriteRenderer>().enabled = false;
+        select = new UiData("selectMusic");
+
+        music1 = new ButtonData("music1");
+        music2 = new ButtonData("music2");
+        music3 = new ButtonData("music3");
+
+        menu.enable();
+        gameStart.enable();
+        login.enable();
+        exit.enable();
+
+        select.disable();
+        music1.disable();
+        music2.disable();
+        music3.disable();
     }
 
     // Update is called once per frame
     void Update()
     {
-        nowTime += Time.deltaTime;
 
-        if (Layer >= 2)
-            StageList.GetComponent<SpriteRenderer>().enabled = true;
-        else
-            StageList.GetComponent<SpriteRenderer>().enabled = false;
-
-        if (Layer < 3)
-            Stage1.GetComponent<SpriteRenderer>().enabled = false;
-        if (Layer == 4)
-        {
-            UnityEngine.SceneManagement.SceneManager.LoadScene("InGame");
-        }
-
-        if(Layer >= 3 && stage == 0)
-        {
-            Stage1.GetComponent<SpriteRenderer>().enabled = true;
-            Stage2.GetComponent<SpriteRenderer>().enabled = false;
-        }
-        if(Layer >= 3 && stage == 1)
-        {
-            Stage1.GetComponent<SpriteRenderer>().enabled = false;
-            Stage2.GetComponent<SpriteRenderer>().enabled = true;
-        }
-            
-
-        if (Input.touchCount > 0)
-            if(Layer < 4 && nowTime - startTime >= 0.5f)
-            {
-                Layer++;
-                startTime = nowTime;
-                if (Layer == 4)
-                    stage = 1;
-            }
-                
-
-        if (Application.platform == RuntimePlatform.Android)
-        {
-            if (Input.GetKey(KeyCode.Escape))
-            {
-                if (Layer > 1)
-                    Layer--;
-                else
-                    UnityEngine.SceneManagement.SceneManager.LoadScene("Start");
-            }
-        }
     }
-
     private void OnDrag(Vector2 delta)
     {
-        if (Layer == 3 && delta.x < 0 && stage > 0)
-        {
-            stage--;
-        }
-        if (Layer == 3 && delta.x > 0 && stage < 1)
-        {
-            stage++;
-        }
+
     }
 }
 

@@ -16,7 +16,7 @@ public class attackButton : MonoBehaviour
     {
         
     }
-    private void OnMouseDown()
+    private void OnMouseUp()
     {
         ob.onHit();
     }
