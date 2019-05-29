@@ -20,5 +20,7 @@ public class upButton : MonoBehaviour
     {
         if(ob.transform.position.y != 3)
             ob.transform.Translate(Vector2.up * 3.0f);
+        else
+            ob.transform.position = new Vector3(ob.transform.position.x, -3, ob.transform.position.z);
     }
 }

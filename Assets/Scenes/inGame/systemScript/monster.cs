@@ -25,6 +25,7 @@ public class monster : MonoBehaviour
         if (transform.position.x <= DestroyXPos || transform.position.y >= DestroyYPos)
         {
             GetComponent<Collider2D>().enabled = false;
+            commonData.combo = 0;
         }
     }
     

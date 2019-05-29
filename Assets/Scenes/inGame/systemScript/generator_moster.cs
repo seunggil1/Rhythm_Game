@@ -45,7 +45,7 @@ public class generator_moster : MonoBehaviour
     void Update()
     {
         nowTime += Time.deltaTime;
-        while (i < timeIndex.Count && timeIndex[i] < nowTime)
+        while (i < timeIndex.Count && timeIndex[i] - 2 < nowTime)
         {
             MakeMonster();
             i++;

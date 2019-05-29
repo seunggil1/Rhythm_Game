@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
+using UnityEngine.UI;
 
 public class main_inGame : MonoBehaviour
 {
@@ -12,6 +13,8 @@ public class main_inGame : MonoBehaviour
     public ButtonData resumeButton;
     public ButtonData exitButton;
 
+    private Text score;
+    private Text combo;
     private AudioSource sound;
     void Start()
     {
@@ -23,11 +26,17 @@ public class main_inGame : MonoBehaviour
 
         pauseMenu.disable();
         pauseButton.enable();
+     
         resumeButton.disable();
         exitButton.disable();
 
         sound = GameObject.Find("music").GetComponent<AudioSource>();
         sound.clip = Resources.Load<AudioClip>(commonData.path + "/music/" + commonData.musicName);
+
+        score = GameObject.Find("score").GetComponent<Text>();
+        combo = GameObject.Find("combo").GetComponent<Text>();
+        commonData.score = 0;
+        commonData.combo = 0;
     }
 
     // Update is called once per frame
@@ -45,6 +54,17 @@ public class main_inGame : MonoBehaviour
             if (exitButton.isClicked == true)
                 UnityEngine.SceneManagement.SceneManager.LoadScene("mainMenu");
         }
+        string num = commonData.score.ToString();
+        string result= "score : ";
+        for (int i = 0; i < 10 - num.Length; i++)
+            result += "0";
+        result += num;
+        score.text = result;
+
+        if (commonData.combo == 0)
+            combo.text = "";
+        else
+            combo.text = commonData.combo.ToString();
     }
 
     public void GamePause()

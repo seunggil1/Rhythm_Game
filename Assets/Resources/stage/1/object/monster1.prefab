@@ -94,7 +94,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MoveSpeed: 7
-  DestroyXPos: -25
+  DestroyXPos: -9
   DestroyYPos: 15
 --- !u!58 &7697474197016436556
 CircleCollider2D:

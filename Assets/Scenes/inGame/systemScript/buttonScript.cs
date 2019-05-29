@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class buttonScript : MonoBehaviour
 {
+    Vector2 incomingVec;
+
     public Transform target_wall;
     // Start is called before the first frame update
     void Start()
@@ -21,7 +23,7 @@ public class buttonScript : MonoBehaviour
         {
             target_wall = hit.transform;
 
-            Vector2 incomingVec = hit.point - new Vector2(transform.position.x, transform.position.y);
+            incomingVec = hit.point - new Vector2(transform.position.x, transform.position.y);
         }
         else
             target_wall = null;
@@ -29,6 +31,15 @@ public class buttonScript : MonoBehaviour
     public void onHit()
     {
         if(target_wall != null)
+        {
             target_wall.gameObject.GetComponent<Collider2D>().enabled = false;
+            if(incomingVec.x < 0.3)
+                commonData.score += 10;
+            else if(incomingVec.x < 0.7)
+                commonData.score += 5;
+            else
+                commonData.score += 2;
+            commonData.combo++;
+        }
     }
 }

@@ -8,8 +8,7 @@ public class backgroundScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        ob = GameObject.Find("background")
-                .GetComponent<SpriteRenderer>();
+        ob = GetComponent<SpriteRenderer>();
         //if (Application.platform == RuntimePlatform.Android)
         ob.sprite = Resources.Load<Sprite>(commonData.path + "/sprite/background/[1280_720]background") as Sprite;
     }

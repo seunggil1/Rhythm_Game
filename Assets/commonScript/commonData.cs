@@ -10,4 +10,5 @@ public static class commonData
     static public string character = "";
     static public int Totalscore = 0;
     static public int score = 0;
+    static public int combo = 0;
 }
