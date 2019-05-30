@@ -16,7 +16,7 @@ public class downButton : MonoBehaviour
     {
         
     }
-    private void OnMouseUp()
+    private void OnMouseDown()
     {
         if (ob.transform.position.y != -3)
             ob.transform.Translate(Vector2.down * 3.0f);
