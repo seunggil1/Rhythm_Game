@@ -8,13 +8,8 @@ public class main_startScreen : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //해상도 설정, 가로 회전만 가능
-        Screen.SetResolution(1280, 720, true);
-        Screen.orientation = ScreenOrientation.AutoRotation;
-        Screen.autorotateToPortrait = false;
-        Screen.autorotateToPortraitUpsideDown = false;
-        Screen.autorotateToLandscapeLeft = true;
-        Screen.autorotateToLandscapeRight = true;
+        new screenSetting().screenSet();
+
     }
 
     // Update is called once per frame
@@ -26,7 +21,8 @@ public class main_startScreen : MonoBehaviour
     }
     void FixedUpdate()
     {
-        if (Input.touchCount > 0)
-            UnityEngine.SceneManagement.SceneManager.LoadScene("mainMenu");
+        if(Time.time > 1.5)
+            if (Input.touchCount > 0)
+                UnityEngine.SceneManagement.SceneManager.LoadScene("mainMenu");
     }
 }
