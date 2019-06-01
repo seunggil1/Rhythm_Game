@@ -5,16 +5,12 @@ using UnityEngine.UI;
 
 public class UiData : MonoBehaviour
 {
-    public Image buttonImage;
     public SpriteRenderer buttonShow;
     
-
     public UiData(string Name)
     {
         GameObject ob;
         ob = GameObject.Find(Name);
-        buttonImage = ob.GetComponent<Image>();
-  
         buttonShow = ob.GetComponent<SpriteRenderer>();
     }
     
