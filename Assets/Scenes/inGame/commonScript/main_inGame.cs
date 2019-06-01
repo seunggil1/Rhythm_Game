@@ -18,7 +18,7 @@ public class main_inGame : MonoBehaviour
     private AudioSource sound;
     void Start()
     {
-        new screenSetting().screenSet();
+        new screenSetting().screenSet(1920);
         pauseMenu = new UiData("picturePause");
         pauseButton = new ButtonData("pause");
         resumeButton = new ButtonData("resume");
@@ -31,12 +31,14 @@ public class main_inGame : MonoBehaviour
         exitButton.disable();
 
         sound = GameObject.Find("music").GetComponent<AudioSource>();
-        sound.clip = Resources.Load<AudioClip>(commonData.path + "/music/" + commonData.musicName);
+        sound.clip = Resources.Load<AudioClip>(commonData.path + "/music/" + commonData.musicName) as AudioClip;
 
         score = GameObject.Find("score").GetComponent<Text>();
         combo = GameObject.Find("combo").GetComponent<Text>();
         commonData.score = 0;
         commonData.combo = 0;
+
+        sound.Play();
     }
 
     // Update is called once per frame
@@ -52,7 +54,11 @@ public class main_inGame : MonoBehaviour
             if (resumeButton.isClicked == true)
                 GameResume();
             if (exitButton.isClicked == true)
+            {
+                GameResume();
                 UnityEngine.SceneManagement.SceneManager.LoadScene("mainMenu");
+            }
+                
         }
         string num = commonData.score.ToString();
         string result= "score : ";

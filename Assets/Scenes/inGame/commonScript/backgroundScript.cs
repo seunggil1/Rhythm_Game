@@ -10,7 +10,7 @@ public class backgroundScript : MonoBehaviour
     {
         ob = GetComponent<SpriteRenderer>();
         //if (Application.platform == RuntimePlatform.Android)
-        ob.sprite = Resources.Load<Sprite>(commonData.path + "/sprite/background/[1280_720]background") as Sprite;
+        ob.sprite = Resources.Load<Sprite>(commonData.path + "/sprite/background/[1920_1080]background") as Sprite;
     }
 
     // Update is called once per frame
