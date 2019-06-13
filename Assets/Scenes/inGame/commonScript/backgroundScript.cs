@@ -9,7 +9,6 @@ public class backgroundScript : MonoBehaviour
     void Start()
     {
         ob = GetComponent<SpriteRenderer>();
-        //if (Application.platform == RuntimePlatform.Android)
         ob.sprite = Resources.Load<Sprite>(commonData.path + "/sprite/background/[1920_1080]background") as Sprite;
     }
 

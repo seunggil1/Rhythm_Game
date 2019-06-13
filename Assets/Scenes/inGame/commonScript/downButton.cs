@@ -5,10 +5,12 @@ using UnityEngine;
 public class downButton : MonoBehaviour
 {
     public GameObject ob;
+    SpriteRenderer sr;
     // Start is called before the first frame update
     void Start()
     {
-        
+        sr = GetComponent<SpriteRenderer>();
+        sr.sprite = Resources.Load<Sprite>(commonData.path + "/sprite/button/arrow_down") as Sprite;
     }
 
     // Update is called once per frame

@@ -17,7 +17,7 @@ public class buttonScript : MonoBehaviour
     void FixedUpdate()
     {
         RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.right, 1.5f);
-        Debug.DrawRay(transform.position, transform.right * 1.5f, Color.red);
+        //Debug.DrawRay(transform.position, transform.right * 1.5f, Color.red);
 
         if (hit)
         {
@@ -33,7 +33,7 @@ public class buttonScript : MonoBehaviour
         if(target_wall != null)
         {
             target_wall.gameObject.GetComponent<Collider2D>().enabled = false;
-            if(incomingVec.x < 0.3)
+            if(incomingVec.x < 0.2)
                 commonData.score += 10;
             else if(incomingVec.x < 0.7)
                 commonData.score += 5;

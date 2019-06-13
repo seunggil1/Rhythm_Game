@@ -18,7 +18,7 @@ public class main_inGame : MonoBehaviour
     private AudioSource sound;
     void Start()
     {
-        new screenSetting().screenSet(1920);
+        new screenSetting().screenSet(1920); //1920*1080
         pauseMenu = new UiData("picturePause");
         pauseButton = new ButtonData("pause");
         resumeButton = new ButtonData("resume");
@@ -38,6 +38,7 @@ public class main_inGame : MonoBehaviour
         commonData.score = 0;
         commonData.combo = 0;
 
+        pauseMenu.buttonShow.sprite = Resources.Load<Sprite>(commonData.path + "/sprite/background/[1280_720]pauseMenu") as Sprite;
         sound.Play();
     }
 
