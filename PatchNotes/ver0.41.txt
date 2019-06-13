@@ -1,0 +1,5 @@
+main menu
+- stage 사진 누를 때 스테이지 이동 제대로 안되는 오류 개선
+ (button의 postion z값 0 -> -1)
+- exit 버튼 활성화.
+- stage3 임시 데이터 추가 , script는 아직 추가 x
