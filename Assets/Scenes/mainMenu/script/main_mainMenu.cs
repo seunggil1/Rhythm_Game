@@ -51,11 +51,12 @@ public class main_mainMenu : MonoBehaviour
     void Update()
     {
         
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyUp(KeyCode.Escape))
         {
-            if(menu.buttonShow == true)
+            
+            if(menu.buttonShow.enabled == true)
                 UnityEngine.SceneManagement.SceneManager.LoadScene("startScreen");
-            else if(select.buttonShow == true)
+            else if(select.buttonShow.enabled == true)
             {
                 enableMenu();
                 disableSelectmusic();

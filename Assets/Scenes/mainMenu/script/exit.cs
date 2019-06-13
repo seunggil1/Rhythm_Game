@@ -17,6 +17,6 @@ public class exit : MonoBehaviour
     }
     private void OnMouseUp()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("startScreen");
+        Application.Quit();
     }
 }
