@@ -57,6 +57,7 @@ public class main_inGame : MonoBehaviour
                 combo.color = Color.blue;
                 break;
         }
+
     }
 
     // Update is called once per frame

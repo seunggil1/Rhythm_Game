@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using System.IO;
 
 public class main_startScreen : MonoBehaviour
@@ -10,12 +8,7 @@ public class main_startScreen : MonoBehaviour
     {
         new screenSetting().screenSet();
         TextAsset asset = Resources.Load("PlayerInfo") as TextAsset;
-        string data = asset.text;
-        StringReader dataReader = new StringReader(data);
-
-        commonData.character = dataReader.ReadLine();
-        commonData.Totalscore = int.Parse(dataReader.ReadLine());
-        commonData.maxCombo = int.Parse(dataReader.ReadLine());
+        userDataIO.readData();
     }
 
     // Update is called once per frame
