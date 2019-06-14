@@ -42,7 +42,7 @@ public class generator_moster : MonoBehaviour
 
         nowTime = 0.0f;
     }
-    void Update()
+    void FixedUpdate()
     {
         nowTime += Time.deltaTime;
         while (i < timeIndex.Count && timeIndex[i] - 2 < nowTime)
