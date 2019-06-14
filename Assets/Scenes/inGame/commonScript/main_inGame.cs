@@ -16,6 +16,7 @@ public class main_inGame : MonoBehaviour
     private Text score;
     private Text combo;
     private AudioSource sound;
+
     void Start()
     {
         new screenSetting().screenSet(1920); //1920*1080
@@ -40,6 +41,22 @@ public class main_inGame : MonoBehaviour
 
         pauseMenu.buttonShow.sprite = Resources.Load<Sprite>(commonData.path + "/sprite/background/[1280_720]pauseMenu") as Sprite;
         sound.Play();
+
+        switch (commonData.path[commonData.path.Length - 1])
+        {
+            case '1':
+                score.color = Color.white;
+                combo.color = Color.white;
+                break;
+            case '2':
+                score.color = Color.magenta;
+                combo.color = Color.magenta;
+                break;
+            case '3':
+                score.color = Color.blue;
+                combo.color = Color.blue;
+                break;
+        }
     }
 
     // Update is called once per frame
