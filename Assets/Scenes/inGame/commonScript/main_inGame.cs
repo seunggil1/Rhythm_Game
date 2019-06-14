@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 using UnityEngine.UI;
+using System.Diagnostics;
 
 public class main_inGame : MonoBehaviour
 {
@@ -17,6 +18,7 @@ public class main_inGame : MonoBehaviour
     private Text combo;
     private AudioSource sound;
 
+    Stopwatch sw;
     void Start()
     {
         new screenSetting().screenSet(1920); //1920*1080
@@ -49,15 +51,16 @@ public class main_inGame : MonoBehaviour
                 combo.color = Color.white;
                 break;
             case '2':
-                score.color = Color.magenta;
-                combo.color = Color.magenta;
+                score.color = Color.white;
+                combo.color = Color.gray;
                 break;
             case '3':
                 score.color = Color.blue;
                 combo.color = Color.blue;
                 break;
         }
-
+        sw = new Stopwatch();
+        sw.Start();
     }
 
     // Update is called once per frame
@@ -89,7 +92,13 @@ public class main_inGame : MonoBehaviour
         if (commonData.combo == 0)
             combo.text = "";
         else
-            combo.text = commonData.combo.ToString();
+            combo.text = "Combo\n"+commonData.combo.ToString();
+
+        if(sound.clip.length +3.0f < sw.ElapsedMilliseconds * 0.001f)
+        {
+            sw.Stop();
+            UnityEngine.SceneManagement.SceneManager.LoadScene("result");
+        }
     }
 
     public void GamePause()

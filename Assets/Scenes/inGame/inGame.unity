@@ -273,8 +273,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 440}
-  m_SizeDelta: {x: 258.4, y: 97.7}
+  m_AnchoredPosition: {x: 0, y: 418.9}
+  m_SizeDelta: {x: 258.4, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &82810884
 MonoBehaviour:
@@ -309,7 +309,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 1
+  m_Text: 'Combo
+
+    1'
 --- !u!222 &82810885
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1350,8 +1352,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 5.9999995, y: 5.9999995, z: 0.2}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 9.510226, y: 8.076227, z: 0.2}
+  m_Center: {x: -0.05014658, y: -0.03572464, z: 0}
 --- !u!212 &1053805254
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1457,8 +1459,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 5.399824, y: 5.466177, z: 0.2}
-  m_Center: {x: 0.045298576, y: 0.09212875, z: 0}
+  m_Size: {x: 9.083208, y: 7.549385, z: 0.2}
+  m_Center: {x: -0.19732189, y: -0.17533398, z: 0}
 --- !u!212 &1062637581
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1599,10 +1601,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: a30828be5db73584f8f3e1ebaf3470a1, type: 3}
-    m_FontSize: 40
+    m_FontSize: 45
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 3
+    m_MinSize: 0
     m_MaxSize: 50
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -2166,8 +2168,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 5.9999995, y: 5.9999995, z: 0.2}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 8.858857, y: 7.933302, z: 0.23642455}
+  m_Center: {x: -0.12615123, y: 0.29419738, z: 0}
 --- !u!212 &1739205358
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2287,6 +2289,11 @@ PrefabInstance:
     - target: {fileID: 3049283797700757576, guid: 6075a71f3b95ee34da40298d7fd589f6,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4700640549050039313, guid: 6075a71f3b95ee34da40298d7fd589f6,
+        type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
