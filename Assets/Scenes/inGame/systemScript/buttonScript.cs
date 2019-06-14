@@ -16,7 +16,7 @@ public class buttonScript : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.right, 1.5f);
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.right, 1.0f);
         //Debug.DrawRay(transform.position, transform.right * 1.5f, Color.red);
 
         if (hit)
@@ -33,13 +33,15 @@ public class buttonScript : MonoBehaviour
         if(target_wall != null)
         {
             target_wall.gameObject.GetComponent<Collider2D>().enabled = false;
-            if(incomingVec.x < 0.2)
+            if(incomingVec.x < 0.05)
                 commonData.score += 10;
-            else if(incomingVec.x < 0.7)
+            else if(incomingVec.x < 0.2)
                 commonData.score += 5;
             else
                 commonData.score += 2;
             commonData.combo++;
+            if (commonData.maxCombo < commonData.combo)
+                commonData.maxCombo = commonData.combo;
         }
     }
 }
