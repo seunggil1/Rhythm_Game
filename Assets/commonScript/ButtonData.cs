@@ -13,6 +13,10 @@ public class ButtonData : MonoBehaviour
         ob = GameObject.Find(Name);
         buttonEnable = ob.GetComponent<BoxCollider2D>();
     }
+    public ButtonData(GameObject ob)
+    {
+        buttonEnable = ob.GetComponent<BoxCollider2D>();
+    }
 
     public void enable()
     {

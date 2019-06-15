@@ -1,0 +1,4 @@
+result 창 추가
+commonData -> 맞춘 갯수/틀린 갯수 기록, clear메소드 추가.
+characterSelect Scene, data추가.
+반응성 개선 - inGame :updated -> FixedUpdate

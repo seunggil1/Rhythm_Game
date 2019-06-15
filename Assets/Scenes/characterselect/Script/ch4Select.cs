@@ -2,21 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class login : MonoBehaviour
+public class ch4Select : MonoBehaviour
 {
+    public main_characterSelect ob;
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
-    private void OnMouseDown()
+    private void OnMouseUp()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("characterSelect");
+        commonData.character = "character4";
+        ob.itchanged = true;
     }
 }

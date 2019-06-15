@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class login : MonoBehaviour
+public class backtoMain : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -15,8 +15,8 @@ public class login : MonoBehaviour
     {
         
     }
-    private void OnMouseDown()
+    private void OnMouseUp()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("characterSelect");
+        UnityEngine.SceneManagement.SceneManager.LoadScene("mainMenu");
     }
 }

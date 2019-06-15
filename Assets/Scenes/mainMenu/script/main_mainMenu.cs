@@ -31,7 +31,7 @@ public class main_mainMenu : MonoBehaviour
 
         menu = new UiData("menu");
         gameStart = new ButtonData("gameStart");
-        //login = new ButtonData("login");
+        login = new ButtonData("login");
         exit = new ButtonData("exit");
 
         select = new UiData("selectMusic");
@@ -155,14 +155,14 @@ public class main_mainMenu : MonoBehaviour
     {
         menu.enable();
         gameStart.enable();
-        //login.enable();
+        login.enable();
         exit.enable();
     }
     private void disableMenu()
     {
         menu.disable();
         gameStart.disable();
-        //login.disable();
+        login.disable();
         exit.disable();
     }
     private void enableSelectmusic()
@@ -203,4 +203,5 @@ public class main_mainMenu : MonoBehaviour
         back.disable();
         backbutton.disable();
     }
+
 }

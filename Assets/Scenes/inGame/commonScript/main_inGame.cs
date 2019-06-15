@@ -109,6 +109,7 @@ public class main_inGame : MonoBehaviour
         resumeButton.enable();
         exitButton.enable();
 
+        sw.Stop();
         sound.Pause();
     }
 
@@ -120,6 +121,7 @@ public class main_inGame : MonoBehaviour
         resumeButton.disable();
         exitButton.disable();
 
+        sw.Start();
         sound.Play();
     }
 }

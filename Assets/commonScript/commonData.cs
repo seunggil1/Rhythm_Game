@@ -8,7 +8,7 @@ public static class commonData
     static public string musicName = "music";
 
     static public string character = "character1"; //save
-    static public int Totalscore = 0; //save
+    static public int Totalscore = 1500; //save
     static public int maxCombo = 0; // save
 
     static public int score = 400;

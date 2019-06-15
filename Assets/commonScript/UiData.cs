@@ -13,6 +13,11 @@ public class UiData : MonoBehaviour
         ob = GameObject.Find(Name);
         buttonShow = ob.GetComponent<SpriteRenderer>();
     }
+
+    public UiData(GameObject ob)
+    {
+        buttonShow = ob.GetComponent<SpriteRenderer>();
+    }
     
     public void enable()
     {

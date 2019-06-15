@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class login : MonoBehaviour
+public class ch1Select : MonoBehaviour
 {
+    public main_characterSelect ob;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,8 +16,9 @@ public class login : MonoBehaviour
     {
         
     }
-    private void OnMouseDown()
+    private void OnMouseUp()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("characterSelect");
+        commonData.character = "character1";
+        ob.itchanged = true;
     }
 }
