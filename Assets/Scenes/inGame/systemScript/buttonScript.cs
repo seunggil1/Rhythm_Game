@@ -39,9 +39,11 @@ public class buttonScript : MonoBehaviour
                 commonData.score += 5;
             else
                 commonData.score += 2;
+
             commonData.combo++;
-            if (commonData.maxCombo < commonData.combo)
-                commonData.maxCombo = commonData.combo;
+            commonData.correctNote++;
+            if (commonData.nowMaxCombo < commonData.combo)
+                commonData.nowMaxCombo = commonData.combo;
         }
     }
 }
