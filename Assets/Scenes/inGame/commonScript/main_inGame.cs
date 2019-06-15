@@ -38,8 +38,8 @@ public class main_inGame : MonoBehaviour
 
         score = GameObject.Find("score").GetComponent<Text>();
         combo = GameObject.Find("combo").GetComponent<Text>();
-        commonData.score = 0;
-        commonData.combo = 0;
+
+        commonData.clear();
 
         pauseMenu.buttonShow.sprite = Resources.Load<Sprite>(commonData.path + "/sprite/background/[1280_720]pauseMenu") as Sprite;
         sound.Play();
