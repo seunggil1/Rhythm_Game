@@ -26,6 +26,7 @@ public class monster : MonoBehaviour
         {
             GetComponent<Collider2D>().enabled = false;
             commonData.combo = 0;
+            commonData.incorrectNote++;
         }
     }
     
