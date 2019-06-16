@@ -19,6 +19,7 @@ public class main_inGame : MonoBehaviour
     private AudioSource sound;
 
     Stopwatch sw;
+    
     void Start()
     {
         new screenSetting().screenSet(1920); //1920*1080
@@ -61,6 +62,7 @@ public class main_inGame : MonoBehaviour
         }
         sw = new Stopwatch();
         sw.Start();
+
     }
 
     // Update is called once per frame
