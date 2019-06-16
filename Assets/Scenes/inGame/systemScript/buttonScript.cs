@@ -6,14 +6,29 @@ public class buttonScript : MonoBehaviour
 {
     Vector2 incomingVec;
 
+    private GameObject character;
+    private Vector3 t;
+
     public Transform target_wall;
     // Start is called before the first frame update
     void Start()
     {
-        
+        character = GameObject.Instantiate(Resources.Load<GameObject>(commonData.character) as GameObject) as GameObject;
+        character.SetActive(true);
+
+        t = character.transform.localScale;
+        t.x = -t.x;
+        character.transform.localScale = t;
     }
 
     // Update is called once per frame
+    private void Update()
+    {
+        t = transform.position;
+        t.x -= 1.75f;
+        t.y -= 1.0f;
+        character.transform.position = t;
+    }
     void FixedUpdate()
     {
         RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.right, 1.0f);

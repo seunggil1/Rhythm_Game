@@ -29,5 +29,9 @@ static public class userDataIO
             sr.Close();
             fs.Close();
         }
+        else
+        {
+            commonData.clear();
+        }
     }
 }
