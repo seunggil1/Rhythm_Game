@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class main_characterSelect : MonoBehaviour
 {
@@ -20,6 +21,7 @@ public class main_characterSelect : MonoBehaviour
     public ButtonData ch3;
     public ButtonData ch4;
 
+    public Text score;
     private Vector3 t;
     public bool itchanged;
     // Start is called before the first frame update
@@ -92,7 +94,8 @@ public class main_characterSelect : MonoBehaviour
             ch3.enable();
             ch4.enable();
         }
-     
+
+        score.text = "Total Score: " + commonData.Totalscore.ToString();
     }
 
     // Update is called once per frame
