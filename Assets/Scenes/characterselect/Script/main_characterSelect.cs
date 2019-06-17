@@ -95,7 +95,32 @@ public class main_characterSelect : MonoBehaviour
             ch4.enable();
         }
 
+        switch (commonData.character)
+        {
+            case "character1":
+                t = check.transform.position;
+                t.x = ch1.buttonEnable.gameObject.transform.position.x;
+                check.transform.position = t;
+                break;
+            case "character2":
+                t = check.transform.position;
+                t.x = ch2.buttonEnable.gameObject.transform.position.x;
+                check.transform.position = t;
+                break;
+            case "character3":
+                t = check.transform.position;
+                t.x = ch3.buttonEnable.gameObject.transform.position.x;
+                check.transform.position = t;
+                break;
+            case "character4":
+                t = check.transform.position;
+                t.x = ch4.buttonEnable.gameObject.transform.position.x;
+                check.transform.position = t;
+                break;
+        }
+
         score.text = "Total Score: " + commonData.Totalscore.ToString();
+
     }
 
     // Update is called once per frame

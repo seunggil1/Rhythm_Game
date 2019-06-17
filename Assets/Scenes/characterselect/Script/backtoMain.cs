@@ -17,6 +17,7 @@ public class backtoMain : MonoBehaviour
     }
     private void OnMouseUp()
     {
+        userDataIO.saveData();
         UnityEngine.SceneManagement.SceneManager.LoadScene("mainMenu");
     }
 }

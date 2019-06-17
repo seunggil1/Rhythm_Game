@@ -13,9 +13,9 @@ public static class commonData
 
     static public int score = 400;
     static public int combo = 0;
-    static public int nowMaxCombo = 20;
-    static public int correctNote = 100;
-    static public int incorrectNote = 50;
+    static public int nowMaxCombo = 0;
+    static public int correctNote = 0;
+    static public int incorrectNote = 0;
 
     static public void clear()
     {

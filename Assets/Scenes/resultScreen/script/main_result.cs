@@ -23,22 +23,26 @@ public class main_result : MonoBehaviour
     bool ct = true;
 
     public GameObject button;
+
+    int totalNotecount;
     // Start is called before the first frame update
     void Start()
     {
         new screenSetting().screenSet(1920);
         sw = new Stopwatch();
         sw.Start();
+
+        if (commonData.maxCombo < commonData.nowMaxCombo)
+            commonData.maxCombo = commonData.nowMaxCombo;
+        commonData.Totalscore += commonData.score;
+        userDataIO.saveData();
+
+        totalNotecount = commonData.correctNote + commonData.incorrectNote;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (commonData.maxCombo < commonData.nowMaxCombo)
-            commonData.maxCombo = commonData.nowMaxCombo;
-        commonData.Totalscore += commonData.score;
-        userDataIO.saveData();
-        int totalNotecount = commonData.correctNote + commonData.incorrectNote;
         if (tn && sw.ElapsedMilliseconds > 2000)
         {
             totalNote.text = totalNote.text + " " + totalNotecount.ToString();
